@@ -100,3 +100,5 @@ class CJ2: Aircraft {
     var cruiseSpeed: Double = 450.80
     
 }
+
+//var r22: Robinson22 = Robinson22(fuelCapacity: <#T##Double#>, pilots: <#T##Int#>, fuelType: <#T##String#>, type: <#T##String#>, capacity: <#T##Int#>, range: <#T##Double#>)

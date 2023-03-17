@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        nameLabel.text = "Eduardo"
+        
     }
-
-
+    
+    @IBAction func tappedLoginButton(_ sender: Any) {
+        print("Cliquei no botão")
+    }
+    
 }
 

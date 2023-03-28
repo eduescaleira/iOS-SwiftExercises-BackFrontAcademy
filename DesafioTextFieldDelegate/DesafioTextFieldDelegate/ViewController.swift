@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextFields()
-        enableRegisterButton()
 
     }
     
@@ -28,7 +27,7 @@ class ViewController: UIViewController {
         nameTextField.layer.cornerRadius = 8
         nameTextField.clipsToBounds = true
         nameTextField.delegate = self
-        nameTextField.layer.borderColor = UIColor.red.cgColor
+        nameTextField.layer.borderColor = UIColor.lightGray.cgColor
         nameTextField.layer.borderWidth = 2.0
         
         addressTextField.placeholder = "Digite o seu endereço"
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
         addressTextField.layer.cornerRadius = 8
         addressTextField.clipsToBounds = true
         addressTextField.delegate = self
-        addressTextField.layer.borderColor = UIColor.red.cgColor
+        addressTextField.layer.borderColor = UIColor.lightGray.cgColor
         addressTextField.layer.borderWidth = 2.0
         
         passwordTextField.placeholder = "Digite a sua senha"
@@ -45,7 +44,7 @@ class ViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 8
         passwordTextField.clipsToBounds = true
         passwordTextField.delegate = self
-        passwordTextField.layer.borderColor = UIColor.red.cgColor
+        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
         passwordTextField.layer.borderWidth = 2.0
         
         registerButton.setTitle("Cadastrar", for: .normal)
@@ -57,9 +56,11 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: FUNÇÕES P/ OS TEXTFIELDS DELEGATE:
+    
     private func enableRegisterButton() {
         
-        if nameTextField.hasText == true && addressTextField.hasText == true && passwordTextField.hasText == true {
+        if nameTextField.hasText && addressTextField.hasText && passwordTextField.hasText {
             registerButton.isEnabled = true
         } else {
             registerButton.isEnabled = false
@@ -77,15 +78,15 @@ class ViewController: UIViewController {
     }
     
     private func checkIfTextFieldHasText(textField: UITextField) {
-        if textField.hasText == false {
+        if !textField.hasText {
             textField.layer.borderColor = UIColor.red.cgColor
-            textField.layer.borderWidth = 2.0
+        } else {
+            textField.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
     
     private func resignBorderColor(textField: UITextField) {
         textField.layer.borderColor = UIColor.blue.cgColor
-        textField.layer.borderWidth = 2.0
     }
     
     
@@ -110,6 +111,6 @@ extension ViewController: UITextFieldDelegate {
         enableRegisterButton()
         checkIfTextFieldHasText(textField: textField)
     }
-    
+
 }
 

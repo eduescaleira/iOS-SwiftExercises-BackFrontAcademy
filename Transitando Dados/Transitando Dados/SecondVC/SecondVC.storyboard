@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SecondVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" id="Y6W-OH-hqX" customClass="SecondVC" customModule="Transitando_Dados" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3Z-sI-1xG">
+                                <rect key="frame" x="40" y="159" width="313" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oV3-1c-4uT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1LY-Zd-VzT">
+                                <rect key="frame" x="20" y="269" width="353" height="249"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1LY-Zd-VzT" secondAttribute="trailing" constant="20" id="CMR-wV-bnr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1LY-Zd-VzT" secondAttribute="bottom" constant="300" id="KVC-RM-2Ke"/>
+                            <constraint firstItem="E3Z-sI-1xG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="QG0-XN-wHF"/>
+                            <constraint firstItem="1LY-Zd-VzT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="cyn-XL-96U"/>
+                            <constraint firstItem="1LY-Zd-VzT" firstAttribute="top" secondItem="E3Z-sI-1xG" secondAttribute="bottom" constant="70" id="d1L-Cc-4FZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="E3Z-sI-1xG" secondAttribute="trailing" constant="40" id="sKh-eU-JFX"/>
+                            <constraint firstItem="E3Z-sI-1xG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="z4O-e8-mbn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="1LY-Zd-VzT" id="3jn-18-4d3"/>
+                        <outlet property="nameLabel" destination="E3Z-sI-1xG" id="9ZQ-nC-MSB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+</document>

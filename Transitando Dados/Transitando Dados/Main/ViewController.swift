@@ -22,13 +22,15 @@ class ViewController: UIViewController {
         "lays",
         "renault",
         "twitter",
-      
     ]
+    
+//    var shuffledLogos: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
         configButton()
+//        shuffledLogos = logos.shuffled()
     }
     
     private func configCollectionView() {

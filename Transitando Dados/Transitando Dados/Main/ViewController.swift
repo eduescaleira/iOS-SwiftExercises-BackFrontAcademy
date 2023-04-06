@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nameTextField: UITextField!
     var image: String = ""
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
+        configButton()
     }
     
     private func configCollectionView() {
@@ -38,6 +40,11 @@ class ViewController: UIViewController {
             layout.estimatedItemSize = .zero
         }
     }
+    
+    private func configButton() {
+        confirmButton.layer.cornerRadius = 12
+        confirmButton.clipsToBounds = true
+    }
 
     
     @IBAction func tappedConfirmButton(_ sender: UIButton) {
@@ -45,7 +52,7 @@ class ViewController: UIViewController {
         let vc: SecondVC? = UIStoryboard(name: "SecondVC", bundle: nil).instantiateViewController(identifier: "SecondVC") { coder -> SecondVC? in return SecondVC(coder: coder, name: self.nameTextField.text ?? "", image: self.image)
         }
         vc?.modalPresentationStyle = .automatic
-        vc?.name = nameTextField.text ?? ""
+    //    vc?.name = nameTextField.text ?? ""
         present(vc ?? UIViewController(), animated: true)
         
     }

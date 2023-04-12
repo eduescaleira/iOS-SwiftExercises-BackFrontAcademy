@@ -15,6 +15,7 @@
 		43BE0D1B29DFA646001B5963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BE0D1929DFA646001B5963 /* LaunchScreen.storyboard */; };
 		43BE0D2529DFAE14001B5963 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE0D2329DFAE14001B5963 /* NameTableViewCell.swift */; };
 		43BE0D2629DFAE14001B5963 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BE0D2429DFAE14001B5963 /* NameTableViewCell.xib */; };
+		43BE0D3829E62B80001B5963 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE0D3729E62B80001B5963 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		43BE0D1C29DFA646001B5963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43BE0D2329DFAE14001B5963 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		43BE0D2429DFAE14001B5963 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		43BE0D3729E62B80001B5963 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		43BE0D0D29DFA645001B5963 /* PrimeiroAppTableView */ = {
 			isa = PBXGroup;
 			children = (
+				43BE0D3629E62B6F001B5963 /* Model */,
 				43BE0D2229DFAD41001B5963 /* Cell */,
 				43BE0D0E29DFA645001B5963 /* AppDelegate.swift */,
 				43BE0D1029DFA645001B5963 /* SceneDelegate.swift */,
@@ -79,6 +82,14 @@
 				43BE0D2429DFAE14001B5963 /* NameTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		43BE0D3629E62B6F001B5963 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43BE0D3729E62B80001B5963 /* Person.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BE0D3829E62B80001B5963 /* Person.swift in Sources */,
 				43BE0D1329DFA645001B5963 /* ViewController.swift in Sources */,
 				43BE0D0F29DFA645001B5963 /* AppDelegate.swift in Sources */,
 				43BE0D2529DFAE14001B5963 /* NameTableViewCell.swift in Sources */,

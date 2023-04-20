@@ -13,6 +13,8 @@
 		430D749829F1F60300470758 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430D749629F1F60300470758 /* Main.storyboard */; };
 		430D749A29F1F60500470758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430D749929F1F60500470758 /* Assets.xcassets */; };
 		430D749D29F1F60500470758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430D749B29F1F60500470758 /* LaunchScreen.storyboard */; };
+		430D74A729F1FF3400470758 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D74A529F1FF3400470758 /* CustomCollectionViewCell.swift */; };
+		430D74A829F1FF3400470758 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430D74A629F1FF3400470758 /* CustomCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		430D749929F1F60500470758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430D749C29F1F60500470758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430D749E29F1F60500470758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430D74A529F1FF3400470758 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		430D74A629F1FF3400470758 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		430D748F29F1F60300470758 /* PrimeiroProjetoCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				430D74A429F1FF0B00470758 /* Cell */,
 				430D749029F1F60300470758 /* AppDelegate.swift */,
 				430D749229F1F60300470758 /* SceneDelegate.swift */,
 				430D749429F1F60300470758 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				430D749E29F1F60500470758 /* Info.plist */,
 			);
 			path = PrimeiroProjetoCollectionView;
+			sourceTree = "<group>";
+		};
+		430D74A429F1FF0B00470758 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				430D74A529F1FF3400470758 /* CustomCollectionViewCell.swift */,
+				430D74A629F1FF3400470758 /* CustomCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +142,7 @@
 				430D749D29F1F60500470758 /* LaunchScreen.storyboard in Resources */,
 				430D749A29F1F60500470758 /* Assets.xcassets in Resources */,
 				430D749829F1F60300470758 /* Main.storyboard in Resources */,
+				430D74A829F1FF3400470758 /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 				430D749529F1F60300470758 /* ViewController.swift in Sources */,
 				430D749129F1F60300470758 /* AppDelegate.swift in Sources */,
 				430D749329F1F60300470758 /* SceneDelegate.swift in Sources */,
+				430D74A729F1FF3400470758 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H23T9FBM6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrimeiroProjetoCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H23T9FBM6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrimeiroProjetoCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

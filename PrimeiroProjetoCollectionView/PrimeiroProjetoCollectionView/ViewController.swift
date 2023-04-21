@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     }
     
     private func configCollectionView() {
-//        collectionView.contentMode = .scaleAspectFit
         collectionView.dataSource = self
         collectionView.delegate = self
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {

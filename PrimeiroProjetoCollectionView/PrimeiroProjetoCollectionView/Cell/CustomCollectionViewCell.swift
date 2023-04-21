@@ -20,7 +20,11 @@ class CustomCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configElement()
+    }
+    
+    private func configElement() {
+        carImageView.contentMode = .scaleAspectFill
     }
     
     func setupCell(nameImage: String) {

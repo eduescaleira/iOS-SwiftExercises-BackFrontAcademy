@@ -31,11 +31,17 @@
                                 <rect key="frame" x="150" y="128" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedChangePictureButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jwz-jl-GDs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvM-5D-kKm">
                                 <rect key="frame" x="150" y="267" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedAppendToTableViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQl-LK-9tG"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7X-ri-TRX">
                                 <rect key="frame" x="20" y="217" width="335" height="34"/>

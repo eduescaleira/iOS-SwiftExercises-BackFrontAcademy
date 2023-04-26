@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
+        configTableView()
     }
     
     private func configElements() {
@@ -42,7 +43,18 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(PersonTableViewCell.nib(), forCellReuseIdentifier: PersonTableViewCell.identifier)
     }
-
+    
+    @IBAction func tappedChangePictureButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func tappedAppendToTableViewButton(_ sender: UIButton) {
+        
+        if let image = perfilImageView.image {
+            userList.append(Person(image: image, name: nameTextField.text ?? ""))
+        }
+        tableView.reloadData()
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

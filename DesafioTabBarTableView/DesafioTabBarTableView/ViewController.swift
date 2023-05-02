@@ -41,18 +41,25 @@ class ViewController: UIViewController {
     private func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+//        tableView.isEditing = true
         tableView.register(PersonTableViewCell.nib(), forCellReuseIdentifier: PersonTableViewCell.identifier)
     }
     
     @IBAction func tappedChangePictureButton(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+          imagePicker.delegate = self
+          imagePicker.sourceType = .photoLibrary
+          present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func tappedAppendToTableViewButton(_ sender: UIButton) {
         
         if let image = perfilImageView.image {
             userList.append(Person(image: image, name: nameTextField.text ?? ""))
+            print("Tamanho da lista: \(userList.count)")
         }
         tableView.reloadData()
+        perfilImageView.image = UIImage(systemName: "person.fill")
     }
     
 }
@@ -66,5 +73,28 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.identifier, for: indexPath) as? PersonTableViewCell
         cell?.setupCell(person: userList[indexPath.row])
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 135
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Remova a célula dos seus dados
+            userList.remove(at: indexPath.row)
+            // Em seguida, remova a célula da tabela
+            tableView.deleteRows(at: [indexPath], with: .fade)
+                //   tableView.reloadData()
+        }
+    }
+}
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imagemSelecionada = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            perfilImageView.image = imagemSelecionada
+        }
+        dismiss(animated: true, completion: nil)
     }
 }

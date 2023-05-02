@@ -20,6 +20,8 @@ class PersonTableViewCell: UITableViewCell {
     }
 
     override func awakeFromNib() {
+        personImage.contentMode = .scaleAspectFill
+        personImage.tintColor = .black
         super.awakeFromNib()
         
     }

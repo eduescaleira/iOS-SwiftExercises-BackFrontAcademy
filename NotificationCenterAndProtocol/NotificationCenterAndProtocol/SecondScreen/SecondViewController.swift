@@ -34,9 +34,13 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func tappedMacOneButton(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name("Macbook"), object: UIColor.red)
+        dismiss(animated: true)
     }
     
     @IBAction func tappedMacTwoButton(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name("iMac"), object: nil)
+        dismiss(animated: true)
     }
     
     

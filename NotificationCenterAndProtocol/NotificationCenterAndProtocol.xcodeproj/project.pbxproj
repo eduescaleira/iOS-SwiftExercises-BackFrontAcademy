@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43047B6B2A0475B400D104F1 /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43047B6A2A0475B400D104F1 /* SecondViewController.storyboard */; };
+		43047B6D2A0475C200D104F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047B6C2A0475C200D104F1 /* SecondViewController.swift */; };
 		43E86C6D2A046BA400EC43CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E86C6C2A046BA400EC43CB /* AppDelegate.swift */; };
 		43E86C6F2A046BA400EC43CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E86C6E2A046BA400EC43CB /* SceneDelegate.swift */; };
 		43E86C712A046BA400EC43CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E86C702A046BA400EC43CB /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43047B6A2A0475B400D104F1 /* SecondViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
+		43047B6C2A0475C200D104F1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		43E86C692A046BA400EC43CB /* NotificationCenterAndProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationCenterAndProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E86C6C2A046BA400EC43CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E86C6E2A046BA400EC43CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43047B6F2A0478C400D104F1 /* SecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				43047B6A2A0475B400D104F1 /* SecondViewController.storyboard */,
+				43047B6C2A0475C200D104F1 /* SecondViewController.swift */,
+			);
+			path = SecondScreen;
+			sourceTree = "<group>";
+		};
 		43E86C602A046BA400EC43CB = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +76,7 @@
 				43E86C752A046BA500EC43CB /* Assets.xcassets */,
 				43E86C772A046BA500EC43CB /* LaunchScreen.storyboard */,
 				43E86C7A2A046BA500EC43CB /* Info.plist */,
+				43047B6F2A0478C400D104F1 /* SecondScreen */,
 			);
 			path = NotificationCenterAndProtocol;
 			sourceTree = "<group>";
@@ -126,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E86C792A046BA500EC43CB /* LaunchScreen.storyboard in Resources */,
+				43047B6B2A0475B400D104F1 /* SecondViewController.storyboard in Resources */,
 				43E86C762A046BA500EC43CB /* Assets.xcassets in Resources */,
 				43E86C742A046BA400EC43CB /* Main.storyboard in Resources */,
 			);
@@ -138,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43047B6D2A0475C200D104F1 /* SecondViewController.swift in Sources */,
 				43E86C712A046BA400EC43CB /* ViewController.swift in Sources */,
 				43E86C6D2A046BA400EC43CB /* AppDelegate.swift in Sources */,
 				43E86C6F2A046BA400EC43CB /* SceneDelegate.swift in Sources */,

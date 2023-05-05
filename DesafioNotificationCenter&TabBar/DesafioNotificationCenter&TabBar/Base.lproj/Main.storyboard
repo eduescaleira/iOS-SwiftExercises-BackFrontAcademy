@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="f2S-L9-xhJ" kind="relationship" relationship="rootViewController" id="4dt-sm-eLO"/>
+                        <segue destination="f2S-L9-xhJ" kind="relationship" relationship="rootViewController" destinationCreationSelector="NameListViewController" id="4dt-sm-eLO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnJ-Av-AZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,7 +71,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Up7-kA-hxm" kind="relationship" relationship="viewControllers" id="eZa-O2-NH8"/>
+                        <segue destination="Up7-kA-hxm" kind="relationship" relationship="viewControllers" destinationCreationSelector="NameListViewController" id="eZa-O2-NH8"/>
                         <segue destination="VS6-sH-Bfa" kind="relationship" relationship="viewControllers" id="a9i-Wa-vdE"/>
                     </connections>
                 </tabBarController>

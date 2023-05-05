@@ -17,19 +17,19 @@ class TabBarController: UITabBarController {
     
     private func setupTabBar() {
         tabBar.isTranslucent = true
-        tabBar.tintColor = UIColor.white.withAlphaComponent(0.7)
+        tabBar.tintColor = UIColor.white.withAlphaComponent(0.9)
         
         let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithDefaultBackground()
-        tabBarAppearance.backgroundColor = .systemCyan
+        tabBarAppearance.backgroundColor = .systemGreen
         tabBar.standardAppearance = tabBarAppearance
         tabBar.scrollEdgeAppearance = tabBarAppearance
         
         guard let items = tabBar.items else { return }
 
         //MARK: - Tab Bar Itens
-        items[0].title = "TableView"
-        items[1].title = "Add Itens"
+        items[0].title = "Lista Nomes"
+        items[1].title = "Add Nomes"
     
         //MARK: - Tab bar Images
         items[0].image = UIImage(systemName: "table")
@@ -37,7 +37,4 @@ class TabBarController: UITabBarController {
         
     }
     
-
-
-
 }

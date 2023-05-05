@@ -20,6 +20,7 @@
 		43047BA32A0592DC00D104F1 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047BA12A0592DC00D104F1 /* NameTableViewCell.swift */; };
 		43047BA42A0592DC00D104F1 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43047BA22A0592DC00D104F1 /* NameTableViewCell.xib */; };
 		43047BA72A0593C500D104F1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047BA62A0593C500D104F1 /* PersonName.swift */; };
+		43047BA92A05A7BC00D104F1 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047BA82A05A7BC00D104F1 /* AlertExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		43047BA12A0592DC00D104F1 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		43047BA22A0592DC00D104F1 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		43047BA62A0593C500D104F1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
+		43047BA82A05A7BC00D104F1 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +72,9 @@
 		43047B7E2A05866500D104F1 /* DesafioNotificationCenter&TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				43047BA52A0593B800D104F1 /* Model */,
+				43047BAA2A05A7C000D104F1 /* Extension */,
 				43047B932A05866B00D104F1 /* Resources */,
+				43047BA52A0593B800D104F1 /* Model */,
 				43047B852A05866500D104F1 /* Main.storyboard */,
 				43047B9E2A05878B00D104F1 /* TabBarController.swift */,
 				43047B8D2A05866600D104F1 /* Info.plist */,
@@ -126,6 +129,14 @@
 				43047BA62A0593C500D104F1 /* PersonName.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		43047BAA2A05A7C000D104F1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43047BA82A05A7BC00D104F1 /* AlertExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				43047B9B2A0586E400D104F1 /* AddNameViewController.swift in Sources */,
 				43047B802A05866500D104F1 /* AppDelegate.swift in Sources */,
 				43047B9F2A05878B00D104F1 /* TabBarController.swift in Sources */,
+				43047BA92A05A7BC00D104F1 /* AlertExtension.swift in Sources */,
 				43047BA72A0593C500D104F1 /* PersonName.swift in Sources */,
 				43047B822A05866500D104F1 /* SceneDelegate.swift in Sources */,
 				43047B972A0586C400D104F1 /* NameListViewController.swift in Sources */,

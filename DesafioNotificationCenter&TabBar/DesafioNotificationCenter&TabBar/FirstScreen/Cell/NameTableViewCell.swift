@@ -20,10 +20,11 @@ class NameTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configLabel()
+        backgroundColor = .systemGray5
     }
     
     private func configLabel() {
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        nameLabel.font = UIFont.systemFont(ofSize: 20)
         nameLabel.textColor = .black
     }
     

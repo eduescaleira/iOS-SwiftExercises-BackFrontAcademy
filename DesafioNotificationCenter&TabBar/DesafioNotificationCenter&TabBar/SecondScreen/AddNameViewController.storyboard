@@ -27,6 +27,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-n1-4Ir">
+                                        <rect key="frame" x="76.666666666666686" y="197" width="240" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="av3-29-BiG"/>
+                                            <constraint firstAttribute="width" constant="240" id="cob-Wa-5oo"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-yN-Qk8">
                                         <rect key="frame" x="80" y="432" width="233" height="45"/>
                                         <constraints>
@@ -47,6 +54,8 @@
                                     <constraint firstItem="VKe-yN-Qk8" firstAttribute="leading" secondItem="gHj-9E-LpJ" secondAttribute="leading" constant="80" id="MUv-Mm-p1n"/>
                                     <constraint firstAttribute="trailing" secondItem="VKe-yN-Qk8" secondAttribute="trailing" constant="80" id="NjB-PS-bSi"/>
                                     <constraint firstItem="BYF-3M-DzA" firstAttribute="leading" secondItem="gHj-9E-LpJ" secondAttribute="leading" constant="20" id="ZQb-rO-eFc"/>
+                                    <constraint firstItem="BYF-3M-DzA" firstAttribute="top" secondItem="GlZ-n1-4Ir" secondAttribute="bottom" constant="10" id="d3x-KM-HYz"/>
+                                    <constraint firstItem="GlZ-n1-4Ir" firstAttribute="centerX" secondItem="gHj-9E-LpJ" secondAttribute="centerX" id="lsu-Vj-Oq1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -62,6 +71,7 @@
                     <connections>
                         <outlet property="addButton" destination="VKe-yN-Qk8" id="SJN-zg-E6G"/>
                         <outlet property="backgroundView" destination="gHj-9E-LpJ" id="mTt-mB-ro7"/>
+                        <outlet property="logoImageView" destination="GlZ-n1-4Ir" id="FbL-2p-yuT"/>
                         <outlet property="nameTextField" destination="BYF-3M-DzA" id="idm-mP-Zkx"/>
                     </connections>
                 </viewController>

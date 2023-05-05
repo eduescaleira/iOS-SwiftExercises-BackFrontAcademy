@@ -9,21 +9,45 @@ import UIKit
 
 class AddNameViewController: UIViewController {
 
+    @IBOutlet weak var backgroundView: UIView!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+
+    @IBOutlet weak var addButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configView()
+        configBackgroundView()
+        addNameButton()
+        configTextField()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configView() {
+        view.backgroundColor = .systemCyan
     }
-    */
+    
+    private func configBackgroundView() {
+        backgroundView.backgroundColor = .systemGray5
+    }
+    
+    private func configTextField() {
+        nameTextField.placeholder =  "Digite um nome"
+        nameTextField.layer.cornerRadius = 12
+        nameTextField.clipsToBounds = true
+    }
+    
+    private func addNameButton() {
+        addButton.setTitle("Adicionar", for: .normal)
+        addButton.setTitleColor(.white, for: .normal)
+        addButton.backgroundColor = .tintColor
+        addButton.layer.cornerRadius = 12
+        addButton.clipsToBounds = true
+    }
+    
+    
+    @IBAction func tappedAddNameButton(_ sender: UIButton) {
+    }
+    
 
 }

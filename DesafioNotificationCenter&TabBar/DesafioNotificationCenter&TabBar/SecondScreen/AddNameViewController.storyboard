@@ -15,9 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-9E-LpJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-3M-DzA">
+                                        <rect key="frame" x="20" y="357" width="353" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="3yC-Si-GOB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-yN-Qk8">
+                                        <rect key="frame" x="80" y="432" width="233" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="P9I-Cl-y0b"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="tappedAddNameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="izF-ml-nYw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BYF-3M-DzA" firstAttribute="centerY" secondItem="gHj-9E-LpJ" secondAttribute="centerY" id="04c-ON-sxw"/>
+                                    <constraint firstItem="VKe-yN-Qk8" firstAttribute="top" secondItem="BYF-3M-DzA" secondAttribute="bottom" constant="30" id="9nV-ll-cYq"/>
+                                    <constraint firstAttribute="trailing" secondItem="BYF-3M-DzA" secondAttribute="trailing" constant="20" id="IGT-vH-XVj"/>
+                                    <constraint firstItem="VKe-yN-Qk8" firstAttribute="leading" secondItem="gHj-9E-LpJ" secondAttribute="leading" constant="80" id="MUv-Mm-p1n"/>
+                                    <constraint firstAttribute="trailing" secondItem="VKe-yN-Qk8" secondAttribute="trailing" constant="80" id="NjB-PS-bSi"/>
+                                    <constraint firstItem="BYF-3M-DzA" firstAttribute="leading" secondItem="gHj-9E-LpJ" secondAttribute="leading" constant="20" id="ZQb-rO-eFc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gHj-9E-LpJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="AgO-Jx-Hyl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gHj-9E-LpJ" secondAttribute="bottom" id="G0M-3n-aq4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gHj-9E-LpJ" secondAttribute="trailing" id="V37-Ee-tFW"/>
+                            <constraint firstItem="gHj-9E-LpJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="h6h-tI-sOh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="VKe-yN-Qk8" id="SJN-zg-E6G"/>
+                        <outlet property="backgroundView" destination="gHj-9E-LpJ" id="mTt-mB-ro7"/>
+                        <outlet property="nameTextField" destination="BYF-3M-DzA" id="idm-mP-Zkx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +71,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

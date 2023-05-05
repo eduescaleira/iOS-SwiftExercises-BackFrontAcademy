@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43047B6B2A0475B400D104F1 /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43047B6A2A0475B400D104F1 /* SecondViewController.storyboard */; };
 		43047B6D2A0475C200D104F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047B6C2A0475C200D104F1 /* SecondViewController.swift */; };
+		43047B722A05791200D104F1 /* NSNotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047B712A05791200D104F1 /* NSNotificationName+Extension.swift */; };
 		43E86C6D2A046BA400EC43CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E86C6C2A046BA400EC43CB /* AppDelegate.swift */; };
 		43E86C6F2A046BA400EC43CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E86C6E2A046BA400EC43CB /* SceneDelegate.swift */; };
 		43E86C712A046BA400EC43CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E86C702A046BA400EC43CB /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		43047B6A2A0475B400D104F1 /* SecondViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
 		43047B6C2A0475C200D104F1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		43047B712A05791200D104F1 /* NSNotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+Extension.swift"; sourceTree = "<group>"; };
 		43E86C692A046BA400EC43CB /* NotificationCenterAndProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationCenterAndProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E86C6C2A046BA400EC43CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E86C6E2A046BA400EC43CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +52,21 @@
 			path = SecondScreen;
 			sourceTree = "<group>";
 		};
+		43047B702A0574E300D104F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43E86C6C2A046BA400EC43CB /* AppDelegate.swift */,
+				43E86C6E2A046BA400EC43CB /* SceneDelegate.swift */,
+				43E86C752A046BA500EC43CB /* Assets.xcassets */,
+				43E86C772A046BA500EC43CB /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		43E86C602A046BA400EC43CB = {
 			isa = PBXGroup;
 			children = (
+				43047B712A05791200D104F1 /* NSNotificationName+Extension.swift */,
 				43E86C6B2A046BA400EC43CB /* NotificationCenterAndProtocol */,
 				43E86C6A2A046BA400EC43CB /* Products */,
 			);
@@ -69,14 +83,11 @@
 		43E86C6B2A046BA400EC43CB /* NotificationCenterAndProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				43E86C6C2A046BA400EC43CB /* AppDelegate.swift */,
-				43E86C6E2A046BA400EC43CB /* SceneDelegate.swift */,
-				43E86C702A046BA400EC43CB /* ViewController.swift */,
+				43047B702A0574E300D104F1 /* Resources */,
 				43E86C722A046BA400EC43CB /* Main.storyboard */,
-				43E86C752A046BA500EC43CB /* Assets.xcassets */,
-				43E86C772A046BA500EC43CB /* LaunchScreen.storyboard */,
-				43E86C7A2A046BA500EC43CB /* Info.plist */,
+				43E86C702A046BA400EC43CB /* ViewController.swift */,
 				43047B6F2A0478C400D104F1 /* SecondScreen */,
+				43E86C7A2A046BA500EC43CB /* Info.plist */,
 			);
 			path = NotificationCenterAndProtocol;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 				43047B6D2A0475C200D104F1 /* SecondViewController.swift in Sources */,
 				43E86C712A046BA400EC43CB /* ViewController.swift in Sources */,
 				43E86C6D2A046BA400EC43CB /* AppDelegate.swift in Sources */,
+				43047B722A05791200D104F1 /* NSNotificationName+Extension.swift in Sources */,
 				43E86C6F2A046BA400EC43CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

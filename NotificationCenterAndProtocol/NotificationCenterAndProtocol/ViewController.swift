@@ -23,14 +23,18 @@ class ViewController: UIViewController {
     }
     
     func configObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMacbook), name: Notification.Name("Macbook"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateIMac), name: Notification.Name("iMac"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMacbook), name: .macbook, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateIMac), name: .iMac, object: nil)
     }
     
     @objc func updateMacbook(_ notification: NSNotification) {
+        logoAppleImageView.image = UIImage(named: "Macbook")
+        nameLabel.text = "Macbook"
     }
     
     @objc func updateIMac(_ notification: NSNotification) {
+        logoAppleImageView.image = UIImage(named: "iMac")
+        nameLabel.text = "iMac"
     }
     
     
@@ -46,6 +50,7 @@ class ViewController: UIViewController {
     
     private func configLabel() {
         nameLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        nameLabel.text = ""
         
     }
     
@@ -57,6 +62,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedClickHereButton(_ sender: UIButton) {
+
     let vc: SecondViewController? = UIStoryboard(name: "SecondViewController", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController
         vc?.modalPresentationStyle = .automatic
         present(vc ?? UIViewController(), animated: true)

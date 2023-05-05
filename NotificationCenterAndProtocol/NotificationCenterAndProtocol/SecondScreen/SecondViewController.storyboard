@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="width" constant="294" id="xnL-Fk-MIR"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="Image 4"/>
+                                <state key="normal" title="Button" image="Macbook"/>
                                 <connections>
                                     <action selector="tappedMacOneButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d1S-gM-KBd"/>
                                 </connections>
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" constant="200" id="FvU-CE-qXW"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="Image 1"/>
+                                <state key="normal" title="Button" image="iMac"/>
                                 <connections>
                                     <action selector="tappedMacTwoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oI7-S8-VGC"/>
                                 </connections>
@@ -71,8 +71,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image 1" width="512" height="512"/>
-        <image name="Image 4" width="1499" height="802"/>
+        <image name="Macbook" width="1499" height="802"/>
+        <image name="iMac" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

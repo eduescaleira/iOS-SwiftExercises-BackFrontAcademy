@@ -21,6 +21,7 @@
 		43047BA42A0592DC00D104F1 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43047BA22A0592DC00D104F1 /* NameTableViewCell.xib */; };
 		43047BA72A0593C500D104F1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047BA62A0593C500D104F1 /* PersonName.swift */; };
 		43047BA92A05A7BC00D104F1 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43047BA82A05A7BC00D104F1 /* AlertExtension.swift */; };
+		43D10FC72A0AFF44008EA8C8 /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D10FC62A0AFF44008EA8C8 /* NotificationCenterExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		43047BA22A0592DC00D104F1 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		43047BA62A0593C500D104F1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		43047BA82A05A7BC00D104F1 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		43D10FC62A0AFF44008EA8C8 /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				43047BA82A05A7BC00D104F1 /* AlertExtension.swift */,
+				43D10FC62A0AFF44008EA8C8 /* NotificationCenterExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				43047B9B2A0586E400D104F1 /* AddNameViewController.swift in Sources */,
 				43047B802A05866500D104F1 /* AppDelegate.swift in Sources */,
 				43047B9F2A05878B00D104F1 /* TabBarController.swift in Sources */,
+				43D10FC72A0AFF44008EA8C8 /* NotificationCenterExtension.swift in Sources */,
 				43047BA92A05A7BC00D104F1 /* AlertExtension.swift in Sources */,
 				43047BA72A0593C500D104F1 /* PersonName.swift in Sources */,
 				43047B822A05866500D104F1 /* SceneDelegate.swift in Sources */,

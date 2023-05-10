@@ -26,7 +26,7 @@ class NameListViewController: UIViewController {
     }
     
     func configObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(addNameToTableView), name: Notification.Name("nome"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(addNameToTableView), name: .nameExtension, object: nil)
     }
     
     @objc func addNameToTableView (_ notification: NSNotification) {

@@ -67,7 +67,7 @@ class AddNameViewController: UIViewController {
             alert?.createAlert(title: "Atenção", message: "A inclusão de um nome é obrigatória")
         } else {
             NotificationCenter.default.post(name: Notification.Name("nome"), object: self, userInfo: ["name": nameTextField.text ?? ""])
-            self.tabBarController?.selectedIndex = 0
+            tabBarController?.selectedIndex = 0
             nameTextField.text = ""
         }
     }

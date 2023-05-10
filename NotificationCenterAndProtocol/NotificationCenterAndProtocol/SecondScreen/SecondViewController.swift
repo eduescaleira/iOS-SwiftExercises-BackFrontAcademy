@@ -7,13 +7,20 @@
 
 import UIKit
 
+//MARK: INCLUIR O PROTOCOLO EM SI
+protocol SecondViewControllerProtocol: AnyObject {
+    func tappedMacbook()
+    func tappedImac()
+}
+
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var optionsLabel: UILabel!
-    
     @IBOutlet weak var macOneButton: UIButton!
-    
     @IBOutlet weak var macTwoButton: UIButton!
+    
+    //MARK: INCLUIR O DELEGATE DO PROTOCOL
+    weak var delegate: SecondViewControllerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +40,14 @@ class SecondViewController: UIViewController {
     }
     
     
+    //MARK: INCLUIR AQUI TAMBÉM
     @IBAction func tappedMacOneButton(_ sender: UIButton) {
-        NotificationCenter.default.post(name: .macbook, object: UIColor.red)
+        delegate?.tappedMacbook()
         dismiss(animated: true)
     }
     
     @IBAction func tappedMacTwoButton(_ sender: UIButton) {
-        NotificationCenter.default.post(name: .iMac, object: nil)
+        delegate?.tappedImac()
         dismiss(animated: true)
     }
     

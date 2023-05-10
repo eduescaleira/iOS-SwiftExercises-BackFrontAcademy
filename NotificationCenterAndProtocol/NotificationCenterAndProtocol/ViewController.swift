@@ -65,9 +65,24 @@ class ViewController: UIViewController {
 
     let vc: SecondViewController? = UIStoryboard(name: "SecondViewController", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController
         vc?.modalPresentationStyle = .automatic
+        vc?.delegate = self // ASSINANDO O PROTOCOLO!
         present(vc ?? UIViewController(), animated: true)
             
     }
+    
+}
+
+extension ViewController: SecondViewControllerProtocol {
+    func tappedMacbook() {
+        logoAppleImageView.image = UIImage(named: "Macbook")
+        nameLabel.text = "Macbook"
+    }
+    
+    func tappedImac() {
+        logoAppleImageView.image = UIImage(named: "iMac")
+        nameLabel.text = "iMac"
+    }
+    
     
 }
 

@@ -19,24 +19,24 @@ class ViewController: UIViewController {
         configView()
         configLabel()
         configButton()
-        configObserver()
+   //    configObserver()
     }
     
-    func configObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMacbook), name: .macbook, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateIMac), name: .iMac, object: nil)
-    }
-    
-    @objc func updateMacbook(_ notification: NSNotification) {
-        logoAppleImageView.image = UIImage(named: "Macbook")
-        nameLabel.text = "Macbook"
-    }
-    
-    @objc func updateIMac(_ notification: NSNotification) {
-        logoAppleImageView.image = UIImage(named: "iMac")
-        nameLabel.text = "iMac"
-    }
-    
+    //MARK: NOTIFICATION CENTER
+//    func configObserver() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateMacbook), name: .macbook, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateIMac), name: .iMac, object: nil)
+//    }
+//
+//    @objc func updateMacbook(_ notification: NSNotification) {
+//        logoAppleImageView.image = UIImage(named: "Macbook")
+//        nameLabel.text = "Macbook"
+//    }
+//
+//    @objc func updateIMac(_ notification: NSNotification) {
+//        logoAppleImageView.image = UIImage(named: "iMac")
+//        nameLabel.text = "iMac"
+//    }
     
     
     private func configImage() {

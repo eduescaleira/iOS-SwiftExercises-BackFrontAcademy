@@ -47,6 +47,23 @@ class LoginScreen: UIView {
         return tf
     }()
     
+    lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Entrar no App", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(tappedLogin), for: .touchUpInside)
+        return button
+    }()
+    
+    //MARK: Como se fosse o Action do Storyboard
+    @objc func tappedLogin(_ sender: UIButton) {
+        print("Botão pressionado")
+    }
     
     //MARK: MÉTODO CONSTRUTOR:
     override init(frame: CGRect) {
@@ -64,6 +81,7 @@ class LoginScreen: UIView {
         addSubview(loginLabel)
         addSubview(emailTextField)
         addSubview(passwordTextField)
+        addSubview(loginButton)
     }
     
     private func configConstraints() {
@@ -81,6 +99,11 @@ class LoginScreen: UIView {
             passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
         
         ])

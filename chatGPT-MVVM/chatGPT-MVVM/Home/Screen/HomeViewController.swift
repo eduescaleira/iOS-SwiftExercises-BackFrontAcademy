@@ -19,6 +19,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.configTableViewProtocols(delegate: self, dataSource: self)
+        screen?.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addLogoToNagivationBarItem(image: UIImage(named: .backFrontLogoImage) ?? UIImage())
     }
     
 }
@@ -36,6 +41,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 200
     }
     
+    
+}
+
+extension HomeViewController: HomeScreenProtocol {
+    func sendMessage(text: String) {
+        print(text)
+    }
     
 }
 

@@ -16,7 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         let viewController = HomeViewController()
-        self.window?.rootViewController = viewController
+        let nav = UINavigationController(rootViewController: viewController)
+        let appearence = UINavigationBarAppearance()
+        appearence.configureWithOpaqueBackground()
+        appearence.backgroundColor = .pink
+        nav.navigationBar.standardAppearance = appearence
+        nav.navigationBar.scrollEdgeAppearance = appearence
+        self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
     }
 

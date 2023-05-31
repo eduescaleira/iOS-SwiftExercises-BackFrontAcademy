@@ -13,6 +13,10 @@
 		43F03D472A0DA70F00D0952A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F03D462A0DA70F00D0952A /* Assets.xcassets */; };
 		43F03D4A2A0DA70F00D0952A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F03D482A0DA70F00D0952A /* LaunchScreen.storyboard */; };
 		43F03DE52A27BD9B00D0952A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DE42A27BD9B00D0952A /* HomeScreen.swift */; };
+		43F03DE92A27EF1900D0952A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DE82A27EF1900D0952A /* UIColor+Extension.swift */; };
+		43F03DEB2A27F03B00D0952A /* MagicStrings+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DEA2A27F03B00D0952A /* MagicStrings+Extension.swift */; };
+		43F03DED2A27F50100D0952A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DEC2A27F50100D0952A /* UIViewController+Extension.swift */; };
+		43F03DEF2A27F81D00D0952A /* ImageNames+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DEE2A27F81D00D0952A /* ImageNames+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		43F03D492A0DA70F00D0952A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43F03D4B2A0DA70F00D0952A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F03DE42A27BD9B00D0952A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		43F03DE82A27EF1900D0952A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		43F03DEA2A27F03B00D0952A /* MagicStrings+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MagicStrings+Extension.swift"; sourceTree = "<group>"; };
+		43F03DEC2A27F50100D0952A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		43F03DEE2A27F81D00D0952A /* ImageNames+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageNames+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		43F03D3C2A0DA70D00D0952A /* chatGPT-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				43F03DE62A27EEFC00D0952A /* Utils */,
 				43F03DE22A27BD7A00D0952A /* Home */,
 				43F03D3D2A0DA70D00D0952A /* AppDelegate.swift */,
 				43F03D3F2A0DA70D00D0952A /* SceneDelegate.swift */,
@@ -81,6 +90,25 @@
 				43F03D412A0DA70D00D0952A /* HomeViewController.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		43F03DE62A27EEFC00D0952A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				43F03DE72A27EF0200D0952A /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		43F03DE72A27EF0200D0952A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43F03DE82A27EF1900D0952A /* UIColor+Extension.swift */,
+				43F03DEA2A27F03B00D0952A /* MagicStrings+Extension.swift */,
+				43F03DEE2A27F81D00D0952A /* ImageNames+Extension.swift */,
+				43F03DEC2A27F50100D0952A /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F03DE52A27BD9B00D0952A /* HomeScreen.swift in Sources */,
+				43F03DEB2A27F03B00D0952A /* MagicStrings+Extension.swift in Sources */,
 				43F03D422A0DA70D00D0952A /* HomeViewController.swift in Sources */,
+				43F03DE92A27EF1900D0952A /* UIColor+Extension.swift in Sources */,
+				43F03DEF2A27F81D00D0952A /* ImageNames+Extension.swift in Sources */,
+				43F03DED2A27F50100D0952A /* UIViewController+Extension.swift in Sources */,
 				43F03D3E2A0DA70D00D0952A /* AppDelegate.swift in Sources */,
 				43F03D402A0DA70D00D0952A /* SceneDelegate.swift in Sources */,
 			);

@@ -33,8 +33,8 @@ class HomeScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .white
-        #warning("REGISTRAR AS CÉLULAS QUE AINDA NÃO EXISTEM")
+        tableView.backgroundColor = .background
+        tableView.register(OutgoingTextTableViewCell.self, forCellReuseIdentifier: OutgoingTextTableViewCell.identifier)
         
         return tableView
     }()

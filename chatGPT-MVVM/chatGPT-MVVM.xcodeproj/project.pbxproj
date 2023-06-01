@@ -19,6 +19,9 @@
 		43F03DEF2A27F81D00D0952A /* ImageNames+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DEE2A27F81D00D0952A /* ImageNames+Extension.swift */; };
 		43F03DF22A2909F900D0952A /* OutgoingTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DF12A2909F900D0952A /* OutgoingTextTableViewCell.swift */; };
 		43F03DF42A29128F00D0952A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DF32A29128F00D0952A /* String+Extension.swift */; };
+		43F03DF62A29180600D0952A /* IncomingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DF52A29180600D0952A /* IncomingTextMessageTableViewCell.swift */; };
+		43F03DF92A291BAC00D0952A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DF82A291BAC00D0952A /* HomeViewModel.swift */; };
+		43F03DFC2A291F0C00D0952A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03DFB2A291F0C00D0952A /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		43F03DEE2A27F81D00D0952A /* ImageNames+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageNames+Extension.swift"; sourceTree = "<group>"; };
 		43F03DF12A2909F900D0952A /* OutgoingTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextTableViewCell.swift; sourceTree = "<group>"; };
 		43F03DF32A29128F00D0952A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		43F03DF52A29180600D0952A /* IncomingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
+		43F03DF82A291BAC00D0952A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		43F03DFB2A291F0C00D0952A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		43F03D3C2A0DA70D00D0952A /* chatGPT-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				43F03DFA2A291EFD00D0952A /* Model */,
 				43F03DE62A27EEFC00D0952A /* Utils */,
 				43F03DE22A27BD7A00D0952A /* Home */,
 				43F03D3D2A0DA70D00D0952A /* AppDelegate.swift */,
@@ -82,6 +89,7 @@
 		43F03DE22A27BD7A00D0952A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				43F03DF72A291B9600D0952A /* ViewModel */,
 				43F03DF02A2908DA00D0952A /* Cell */,
 				43F03DE32A27BD8100D0952A /* Screen */,
 			);
@@ -120,9 +128,26 @@
 		43F03DF02A2908DA00D0952A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				43F03DF52A29180600D0952A /* IncomingTextMessageTableViewCell.swift */,
 				43F03DF12A2909F900D0952A /* OutgoingTextTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		43F03DF72A291B9600D0952A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43F03DF82A291BAC00D0952A /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		43F03DFA2A291EFD00D0952A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43F03DFB2A291F0C00D0952A /* Message.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,12 +221,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F03DE52A27BD9B00D0952A /* HomeScreen.swift in Sources */,
+				43F03DF62A29180600D0952A /* IncomingTextMessageTableViewCell.swift in Sources */,
 				43F03DEB2A27F03B00D0952A /* MagicStrings+Extension.swift in Sources */,
 				43F03DF22A2909F900D0952A /* OutgoingTextTableViewCell.swift in Sources */,
 				43F03D422A0DA70D00D0952A /* HomeViewController.swift in Sources */,
 				43F03DE92A27EF1900D0952A /* UIColor+Extension.swift in Sources */,
 				43F03DEF2A27F81D00D0952A /* ImageNames+Extension.swift in Sources */,
+				43F03DF92A291BAC00D0952A /* HomeViewModel.swift in Sources */,
 				43F03DED2A27F50100D0952A /* UIViewController+Extension.swift in Sources */,
+				43F03DFC2A291F0C00D0952A /* Message.swift in Sources */,
 				43F03D3E2A0DA70D00D0952A /* AppDelegate.swift in Sources */,
 				43F03DF42A29128F00D0952A /* String+Extension.swift in Sources */,
 				43F03D402A0DA70D00D0952A /* SceneDelegate.swift in Sources */,

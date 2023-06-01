@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var screen: HomeScreen?
+    var viewModel: HomeViewModel = HomeViewModel()
     
     override func loadView() {
         screen = HomeScreen()
@@ -30,18 +31,26 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTextTableViewCell.identifier, for: indexPath) as? OutgoingTextTableViewCell
-        cell?.setupCell(message: "Olá teste")
+        let model = viewModel.loadCurrentMessage(indexPath: indexPath)
+        switch model.typeMessage {
+        case .user:
+            let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTextTableViewCell.identifier, for: indexPath) as? OutgoingTextTableViewCell
+            cell?.setupCell(message: model.message)
+            return cell ?? UITableViewCell()
+        case .chatGPT:
+            let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTextMessageTableViewCell.identifier, for: indexPath) as? IncomingTextMessageTableViewCell
+            cell?.setupCell(message: model.message)
+            return cell ?? UITableViewCell()
+        }
     
-        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return "Olá teste".heightWithConstrainedWidth(width: 220, font: UIFont(name: "HelveticaNeue-Medium", size: 16) ?? UIFont()) + 60
+        return viewModel.heightForForAt(indexPath: indexPath)
     }
     
     
@@ -49,7 +58,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: HomeScreenProtocol {
     func sendMessage(text: String) {
-        print(text)
+        viewModel.addMessage(message: text)
+        screen?.tableView.reloadData()
     }
     
 }

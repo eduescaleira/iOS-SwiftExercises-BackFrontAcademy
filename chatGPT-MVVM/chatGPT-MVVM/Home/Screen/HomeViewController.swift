@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var screen: HomeScreen?
+    var viewModel: HomeViewModel = HomeViewModel()
     
     override func loadView() {
         screen = HomeScreen()
@@ -20,6 +21,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         screen?.configTableViewProtocols(delegate: self, dataSource: self)
         screen?.delegate = self
+        viewModel.delegate(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,15 +32,26 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let model = viewModel.loadCurrentMessage(indexPath: indexPath)
+        switch model.typeMessage {
+        case .user:
+            let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTextTableViewCell.identifier, for: indexPath) as? OutgoingTextTableViewCell
+            cell?.setupCell(message: model.message)
+            return cell ?? UITableViewCell()
+        case .chatGPT:
+            let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTextMessageTableViewCell.identifier, for: indexPath) as? IncomingTextMessageTableViewCell
+            cell?.setupCell(message: model.message)
+            return cell ?? UITableViewCell()
+        }
+    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return viewModel.heightForForAt(indexPath: indexPath)
     }
     
     
@@ -46,7 +59,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: HomeScreenProtocol {
     func sendMessage(text: String) {
-        print(text)
+        viewModel.fethMessage(message: text)
+        screen?.tableView.reloadData()
+    }
+    
+}
+
+extension HomeViewController: HomeViewModelProtocol {
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.screen?.tableView.reloadData()
+        }
     }
     
 }

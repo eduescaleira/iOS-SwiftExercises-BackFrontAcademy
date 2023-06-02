@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         screen?.configTableViewProtocols(delegate: self, dataSource: self)
         screen?.delegate = self
+        viewModel.delegate(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,8 +59,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: HomeScreenProtocol {
     func sendMessage(text: String) {
-        viewModel.addMessage(message: text)
+        viewModel.fethMessage(message: text)
         screen?.tableView.reloadData()
+    }
+    
+}
+
+extension HomeViewController: HomeViewModelProtocol {
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.screen?.tableView.reloadData()
+        }
     }
     
 }

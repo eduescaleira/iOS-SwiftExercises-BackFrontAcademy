@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4334D8DF2A29619C005FACF5 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4334D8DE2A29619C005FACF5 /* HomeService.swift */; };
+		4334D8E22A296353005FACF5 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4334D8E12A296353005FACF5 /* OpenAISwift */; };
 		43F03D3E2A0DA70D00D0952A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03D3D2A0DA70D00D0952A /* AppDelegate.swift */; };
 		43F03D402A0DA70D00D0952A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03D3F2A0DA70D00D0952A /* SceneDelegate.swift */; };
 		43F03D422A0DA70D00D0952A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F03D412A0DA70D00D0952A /* HomeViewController.swift */; };
@@ -25,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4334D8DE2A29619C005FACF5 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		43F03D3A2A0DA70D00D0952A /* chatGPT-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chatGPT-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F03D3D2A0DA70D00D0952A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43F03D3F2A0DA70D00D0952A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,12 +52,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4334D8E22A296353005FACF5 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4334D8DD2A29618E005FACF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4334D8DE2A29619C005FACF5 /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		43F03D312A0DA70D00D0952A = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +86,7 @@
 		43F03D3C2A0DA70D00D0952A /* chatGPT-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4334D8DD2A29618E005FACF5 /* Service */,
 				43F03DFA2A291EFD00D0952A /* Model */,
 				43F03DE62A27EEFC00D0952A /* Utils */,
 				43F03DE22A27BD7A00D0952A /* Home */,
@@ -166,6 +179,9 @@
 			dependencies = (
 			);
 			name = "chatGPT-MVVM";
+			packageProductDependencies = (
+				4334D8E12A296353005FACF5 /* OpenAISwift */,
+			);
 			productName = "chatGPT-MVVM";
 			productReference = 43F03D3A2A0DA70D00D0952A /* chatGPT-MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +210,9 @@
 				Base,
 			);
 			mainGroup = 43F03D312A0DA70D00D0952A;
+			packageReferences = (
+				4334D8E02A296353005FACF5 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 43F03D3B2A0DA70D00D0952A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4334D8DF2A29619C005FACF5 /* HomeService.swift in Sources */,
 				43F03DE52A27BD9B00D0952A /* HomeScreen.swift in Sources */,
 				43F03DF62A29180600D0952A /* IncomingTextMessageTableViewCell.swift in Sources */,
 				43F03DEB2A27F03B00D0952A /* MagicStrings+Extension.swift in Sources */,
@@ -440,6 +460,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4334D8E02A296353005FACF5 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4334D8E12A296353005FACF5 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4334D8E02A296353005FACF5 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43F03D322A0DA70D00D0952A /* Project object */;
 }
